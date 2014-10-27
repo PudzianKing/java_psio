@@ -1,0 +1,52 @@
+package tablice;
+
+import java.util.Scanner;
+
+public class zad1 {
+	
+	public static int wczytaj(int a){
+		System.out.println("Podaj liczbe "+a);
+		int b=cin.nextInt();
+		System.out.println(b);
+		return 	b;
+	}
+	
+	public static int suma(int[]tab){
+		tab=new int[5];
+		int suma=0;
+		for(int i=0;i<=tab.length;i++){
+			suma+=tab[i];
+		}
+		return suma;
+	}
+	
+	public static Scanner cin;
+	
+	public static void main(String[] args) {
+		int[]tab=new int[5];
+		for(int i=0;i<=tab.length;i++){
+			tab[i]=wczytaj(i+1);
+		}
+		for(int i=0;i<=tab.length;i++){
+			System.out.printf("%4d",tab[i]);
+		}
+		System.out.println("oto suma: "+suma(tab));	
+		
+		
+		
+		
+		/*int l=0;
+		for(int i=0;i<tab.length;i++){
+			for(int j=0;j<tab[i].length;j++){
+				tab[i][j]=l++;
+			}
+		}
+		for(int i=0;i<tab.length;i++){
+			for(int j=0;j<tab[i].length;j++){
+				System.out.print(tab[i][j]+" ");
+			}
+			System.out.println();
+		}*/
+	}
+	
+}

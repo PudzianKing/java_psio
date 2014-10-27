@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Przekształć zmienną lokalną Pierwszy.main().cin w Pierwszy.main() w pole&#x0D;&#x0A;- Original project: &apos;Pierwszy&apos;&#x0D;&#x0A;- Element oryginalny: Pierwszy.main().cin&#x0D;&#x0A;- Nazwa pola: cin&#x0D;&#x0A;- Inicjuj pole w metodzie&#x0D;&#x0A;- Zadeklarowana widoczność: private&#x0D;&#x0A;- Deklaruj pole static" description="Przekształć zmienną lokalną cin w pole" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;{Pierwszy.java" name="cin" selection="165 28" stamp="1411987501655" static="true" version="1.0" visibility="2"/>
+</session>
