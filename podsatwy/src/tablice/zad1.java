@@ -4,40 +4,46 @@ import java.util.Scanner;
 
 public class zad1 {
 	
+	public static Scanner cin;
+	
 	public static void load_0(){
-		for(int i=0;i<=tab.length;i++){
+		for(int i=0;i<index;i++){
 			tab[i]=0;
 		}
 	}
 	
 	public static void load(){
-		for(int i=0;i<=tab.length;i++){
-			System.out.println("Podaj liczbe "+i);
+		for(int i=0;i<tab.length;i++){
+			System.out.println("Podaj liczbe "+(i+1));
 			tab[i]=cin.nextInt();
-			System.out.println(tab[i]);
 		}
 	}
 	
-	public static int suma(int[]tab){
-		tab=new int[5];
+	public static int suma(){
+		
 		int suma=0;
-		for(int i=0;i<=tab.length;i++){
+		for(int i=0;i<tab.length;i++){
 			suma+=tab[i];
 		}
 		return suma;
 	}
 	
-	public static Scanner cin;
-	
-	public static int[]tab=new int[5];
-	
-	public static void main(String[] args) {
-		load_0();
-		load();
-		for(int i=0;i<=tab.length;i++){
+	public static void out(){
+		for(int i=0;i<tab.length;i++){
 			System.out.printf("%4d",tab[i]);
 		}
-		System.out.println("oto suma: "+suma(tab));	
+		System.out.println();
+	}
+	
+	public static int index=5;
+	public static int[]tab=new int[index];
+	
+	public static void main(String[] args) {
+		cin = new Scanner(System.in);
+		load_0();
+		load();
+		out();
+		System.out.println("oto suma: "+suma());	
 		
 		
 		
