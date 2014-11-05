@@ -212,7 +212,7 @@ public class zad4 {
 		}
 	}
 
-	public static int index=20;//pierwszy wymiar tablicy
+	public static int index=5;//pierwszy wymiar tablicy
 	public static int ind=5;//drugi wymiar tablicy
 	public static int index2=index*ind;
 	public static int[]tab=new int[index];
@@ -223,8 +223,8 @@ public class zad4 {
 	public static void main(String[] args) {
 		cin = new Scanner(System.in);
 		rng = new Random();
-		load_0(tab);
-		load_r(tab,100,0);
+		load_0(tab2);
+		load_r(tab2,100,0);
 		out_2();
 		
 		for(int i=0;i<ind;i++){
