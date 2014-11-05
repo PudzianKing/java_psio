@@ -3,7 +3,7 @@ package tablice;
 import java.util.Scanner;
 import java.util.Random;
 
-public class zad4 {
+public class zad7 {
 	
 	public static Scanner cin;
 	
@@ -73,20 +73,71 @@ public static int suma_d(int tab[]){ //suma dodatnich liczb w tablicy
 		}
 		return suma;
 	}
+
+
 	public static int suma_u(int tab[]){ //suma ujemnych liczb w tablicy
 		
 		int suma=0;
 		for(int i=0;i<tab.length;i++){
-			if(tab[i]%2<0)
+			if(tab[i]<0)
 			suma+=tab[i];
 		}
 		return suma;
 	}
-	public static int suma_k_2(int tab[],int n){ //suma liczb w wierszu tablicy
+public static int suma_d_i(int tab[]){ //ilosc dodatnich liczb w tablicy
 		
+		int suma=0;
+		for(int i=0;i<tab.length;i++){
+			if(tab[i]>0)
+			suma++;
+		}
+		return suma;
+	}
+
+
+	public static int suma_u_i(int tab[]){ //ilosc ujemnych liczb w tablicy
+		
+		int suma=0;
+		for(int i=0;i<tab.length;i++){
+			if(tab[i]<0)
+			suma++;
+		}
+		return suma;
+	}
+	public static int suma_w_2(int tab[],int n){ //suma liczb w wierszu tablicy
 		int suma=0;
 		for(int i=0;i<ind;i++){
 			suma+=tab[i+(n*5)];	
+		}
+		return suma;
+	}
+	
+	public static int suma_w_w(int tab[],int t){ //suma liczb w wierszu tablicy podzielnych przez liczbe podana
+		int suma=0;
+		for(int i=0;i<tab.length;i++){
+			if(tab[i]%t==0){
+				suma++;
+			}
+		}
+		return suma;
+	}
+	
+	public static int suma_w_n(int tab[],int t){ //suma liczb w wierszu tablicy nie podzielnych przez liczbe podana
+		int suma=0;
+		for(int i=0;i<tab.length;i++){
+			if(tab[i]%t!=0){
+				suma++;
+			}
+		}
+		return suma;
+	}
+	
+public static int suma_k_2(int tab[],int n){ //suma liczb w kolumnie tablicy
+		
+		int suma=0;
+		suma+=tab[n];
+		for(int i=1;i<ind;i++){
+			suma+=tab[n+ind*i];	
 		}
 		return suma;
 	}
@@ -119,14 +170,11 @@ public static int suma_d(int tab[]){ //suma dodatnich liczb w tablicy
 		cin = new Scanner(System.in);
 		rng = new Random();
 		load_0(tab2);
-		load(tab2);
+		load_r(tab2,200,100);
 		out_2();
-		System.out.println("oto suma: "+suma(tab2));
-		for(int i=0;i<ind;i++){
-			System.out.println("oto suma wiersza "+(i+1)+": "+suma_k_2(tab2,i));
-		}
-		
-		
+		System.out.println("oto ilosc nie podzielnych przez 2: "+suma_w_n(tab2,2));
+		System.out.println("oto ilosc podzielnych przez 4: "+suma_w_w(tab2,4));
+			
 	
 	}
 	

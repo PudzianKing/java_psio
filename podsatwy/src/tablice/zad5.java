@@ -3,7 +3,7 @@ package tablice;
 import java.util.Scanner;
 import java.util.Random;
 
-public class zad4 {
+public class zad5 {
 	
 	public static Scanner cin;
 	
@@ -82,11 +82,20 @@ public static int suma_d(int tab[]){ //suma dodatnich liczb w tablicy
 		}
 		return suma;
 	}
-	public static int suma_k_2(int tab[],int n){ //suma liczb w wierszu tablicy
-		
+	public static int suma_w_2(int tab[],int n){ //suma liczb w wierszu tablicy
 		int suma=0;
 		for(int i=0;i<ind;i++){
 			suma+=tab[i+(n*5)];	
+		}
+		return suma;
+	}
+	
+public static int suma_k_2(int tab[],int n){ //suma liczb w kolumnie tablicy
+		
+		int suma=0;
+		suma+=tab[n];
+		for(int i=1;i<ind;i++){
+			suma+=tab[n+ind*i];	
 		}
 		return suma;
 	}
@@ -119,11 +128,11 @@ public static int suma_d(int tab[]){ //suma dodatnich liczb w tablicy
 		cin = new Scanner(System.in);
 		rng = new Random();
 		load_0(tab2);
-		load(tab2);
+		load_r(tab2,10,0);
 		out_2();
 		System.out.println("oto suma: "+suma(tab2));
 		for(int i=0;i<ind;i++){
-			System.out.println("oto suma wiersza "+(i+1)+": "+suma_k_2(tab2,i));
+			System.out.println("oto suma kolumny "+(i+1)+": "+suma_k_2(tab2,i));
 		}
 		
 		
