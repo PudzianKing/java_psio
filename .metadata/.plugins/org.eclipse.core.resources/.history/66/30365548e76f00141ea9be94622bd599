@@ -49,7 +49,7 @@ public class zad4 {
 		System.out.println("min: "+min);	
 	}
 	
-	public static char znak(int a){	//test dodatnio艣ci
+	public static char znak(int a){	//test dodatnio渃i
 		if(a==0){
 			return '0';
 		}
@@ -82,7 +82,7 @@ public class zad4 {
 	
 	public int licz;
 	
-	public void load_u(){	//wypisanie textu i wczytanie inta u艂amek
+	public void load_u(){	//wypisanie textu i wczytanie inta u砤mek
 		licz=load("licznik");
 		mian=load("mianownik");
 	}
@@ -91,47 +91,35 @@ public class zad4 {
 		System.out.println(licz+"/"+mian);
 	}
 	
-	public void u_sum(zad4 u1,zad4 u2){	//test ulamk贸w
+	public void u_sum(zad4 u1,zad4 u2){	//test ulamk體
 		if(u1.mian==u2.mian){
 			sum(u1,u2);
 		}
 		else{
 			u_pd(u1,u2);
 		}
+		u1.out_u();
+		u2.out_u();
 		sum(u1,u2);
-
 	}
-	public void u_sk(zad4 u1){	//mnozenie ulamkow
-		if (u1.licz==u1.mian){
-			System.out.println("1/1");
-			u1.licz=1;
-			u1.mian=1;
-		}
-		else{
-			int a=NWD(u1.licz,u1.mian);
-			System.out.println(a);
-			u1.licz=u1.licz/a;
-			u1.mian=u1.mian/a;
-			System.out.println("Nie da si锚 skr贸ci忙!");
-		}
-	}
+	
 	public void u_pd(zad4 u1,zad4 u2){	//monrzenie ulamkow
 		int a=u1.mian*u2.mian;
-		u1.licz=u1.licz*(a/u1.mian);
-		u2.licz=u2.licz*(a/u2.mian);
+		u1.licz=u1.licz*(a/u2.mian);
+		u2.licz=u2.licz*(a/u1.mian);
 		u1.mian=a;
 		u2.mian=a;
 		
 		
 	}
 	
-	public void sum(zad4 u1,zad4 u2){	//dodawanie ulamk贸w
+	public void sum(zad4 u1,zad4 u2){	//dodawanie ulamk體
 		if(u1.mian==u2.mian){
 			licz=u1.licz+u2.licz;
 			mian=u1.mian;
 		}
 		else{
-			System.out.println("nidy rydy p贸ki co");
+			System.out.println("nidy rydy p髃i co");
 		}
 	}
 	
@@ -145,7 +133,6 @@ public class zad4 {
 		ul2.load_u();
 		ul2.out_u();
 		ul3.u_sum(ul1, ul2);
-		ul3.u_sk(ul3);
 		ul3.out_u();
 	}
 }

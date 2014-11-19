@@ -109,7 +109,6 @@ public class zad4 {
 		}
 		else{
 			int a=NWD(u1.licz,u1.mian);
-			System.out.println(a);
 			u1.licz=u1.licz/a;
 			u1.mian=u1.mian/a;
 			System.out.println("Nie da siê skróciæ!");
