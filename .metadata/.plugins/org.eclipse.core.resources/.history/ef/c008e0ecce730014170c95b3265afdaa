@@ -104,18 +104,21 @@ public class zad4 {
 	}
 	
 	public void u_sk(){	//skraqcanie ulamkow
-		if (u3.licz==u3.mian){
-			u3.licz=1;
-			u3.mian=1;
+		if (u1.licz==u1.mian){
+			u1.licz=1;
+			u1.mian=1;
+			System.out.println("siewo");// debug
 		}
 		else{
 			if(NWD(u1.licz,u1.mian)>1){
-				int a=NWD(u3.licz,u3.mian);
-				u3.licz=u3.licz/a;
-				u3.mian=u3.mian/a;
+			int a=NWD(u3.licz,u3.mian);
+			u3.licz=u3.licz/a;
+			u3.mian=u3.mian/a;
+			System.out.println("siewo");// debug
 			}
 			else{
-				System.out.print("Nie da sie skrócic!  ");
+			System.out.println("Nie da sie skrócic!");
+			System.out.println("siewo");// debug
 			}
 		}
 	}

@@ -107,14 +107,17 @@ public class zad4 {
 		if (u3.licz==u3.mian){
 			u3.licz=1;
 			u3.mian=1;
+			System.out.println("siewo1");// debug
 		}
 		else{
 			if(NWD(u1.licz,u1.mian)>1){
 				int a=NWD(u3.licz,u3.mian);
 				u3.licz=u3.licz/a;
 				u3.mian=u3.mian/a;
+				System.out.println("siewo2");// debug
 			}
 			else{
+				System.out.println("siewo3");// debug
 				System.out.print("Nie da sie skrócic!  ");
 			}
 		}

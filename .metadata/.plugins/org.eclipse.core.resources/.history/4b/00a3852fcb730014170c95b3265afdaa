@@ -91,36 +91,34 @@ public class zad4 {
 		System.out.println(licz+"/"+mian);
 	}
 	
-	public void u_sum(){	//test ulamków
+	public void u_sum(zad4 u1,zad4 u2){	//test ulamków
 		if(u1.mian==u2.mian){
-			u3.sum();
+			sum(u1,u2);
 		}
 		else{
-			u3.u_pd();
-			u3.sum();
+			u_pd(u1,u2);
+			sum(u1,u2);
 		}
 		
 
 	}
-	
-	public void u_sk(){	//skraqcanie ulamkow
-		if (u3.licz==u3.mian){
-			u3.licz=1;
-			u3.mian=1;
+	public void u_sk(zad4 u1){	//skraqcanie ulamkow
+		if (u1.licz==u1.mian){
+			u1.licz=1;
+			u1.mian=1;
 		}
 		else{
 			if(NWD(u1.licz,u1.mian)>1){
-				int a=NWD(u3.licz,u3.mian);
-				u3.licz=u3.licz/a;
-				u3.mian=u3.mian/a;
+			int a=NWD(u1.licz,u1.mian);
+			u1.licz=u1.licz/a;
+			u1.mian=u1.mian/a;
 			}
 			else{
-				System.out.print("Nie da sie skrócic!  ");
+			System.out.println("Nie da sie skrócic!");
 			}
 		}
-	}
-	
-	public void u_pd(){	//monrzenie ulamkow
+	}	
+	public void u_pd(zad4 u1,zad4 u2){	//monrzenie ulamkow
 		int a=u1.mian*u2.mian;
 		u1.licz=u1.licz*(a/u1.mian);
 		u2.licz=u2.licz*(a/u2.mian);
@@ -130,33 +128,29 @@ public class zad4 {
 		
 	}
 	
-	public void sum(){	//dodawanie ulamków
+	public void sum(zad4 u1,zad4 u2){	//dodawanie ulamków
 		if(u1.mian==u2.mian){
-			u3.licz=u1.licz+u2.licz;
-			u3.mian=u1.mian;
-		
+			ul3.licz=u1.licz+u2.licz;
+			ul3.mian=u1.mian;
+			System.out.println(ul3.licz+"23");
 		}
 		else{
 			System.out.println("nidy rydy póki co");
 		}
 	}
-	
-	public static zad4 u1=new zad4();
-	
-	public static zad4 u2=new zad4();
-	
-	public static zad4 u3=new zad4();
-	
+	public static zad4 ul3=new zad4();
 	public static void main(String[] args) {	//main
 		cin = new Scanner(System.in);
-
-		u1.load_u();
-		u1.out_u();
-		u2.load_u();
-		u2.out_u();
-		u3.u_sum();
-		
-		u3.u_sk();
-		u3.out_u();
+		zad4 ul1=new zad4();
+		zad4 ul2=new zad4();
+		zad4 ul3=new zad4();
+		ul1.load_u();
+		ul1.out_u();
+		ul2.load_u();
+		ul2.out_u();
+		ul3.u_sum(ul1, ul2);
+		ul3.out_u();
+		ul3.u_sk(ul3);
+		ul3.out_u();
 	}
 }
